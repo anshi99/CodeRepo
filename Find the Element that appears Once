@@ -1,0 +1,13 @@
+//User function template for C++
+class Solution{
+public:	
+	int search(int A[], int N){
+	    //code
+	    int a=0;
+	    for(int i=0;i<N;i++)
+	    {
+	        a=a^A[i];
+	    }
+	    return a;
+	}
+};
