@@ -1,0 +1,36 @@
+//User function template for C++
+class Solution{
+public:	
+	// Function returns the second
+	// largest elements
+	int print2largest(int arr[], int n) {
+	    // code here
+	    
+	    bool flag=0;
+	    int lar=arr[0];
+	    int slar=-1;
+	    
+	    for(int i=1;i<n;i++)
+	    {
+    		if(arr[i]>lar)
+    		{
+    			slar=lar;
+    			lar=arr[i];
+    			flag=1;
+    		}
+    		
+    		else if(arr[i]<lar && arr[i]>slar)
+    		{
+    			slar=arr[i];
+    			flag=1;
+    		}
+    	}
+    	if(flag==1)
+    	{
+    	    return slar;
+    	}
+    	else
+    	return -1;
+    	
+	}
+};
