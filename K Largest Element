@@ -1,0 +1,14 @@
+#include <bits/stdc++.h> 
+vector<int> Klargest(vector<int> &a, int k, int n) {
+    // Write your code here
+    vector <int> v;
+
+    sort(a.begin(),a.end());
+
+    for(int i=n-k;i<n;i++)
+    {
+        v.push_back(a[i]);
+    }
+
+    return v;
+}
