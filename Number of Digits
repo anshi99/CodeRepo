@@ -1,0 +1,12 @@
+#include <bits/stdc++.h> 
+int countDigit(long long x) {
+    // Write your code here.
+    int c=0,a=0;
+    while(x>0)
+    {
+        a=x%10;
+        x=x/10;
+        c++;
+    }
+    return c;
+}
