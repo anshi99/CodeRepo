@@ -1,0 +1,13 @@
+#include <bits/stdc++.h> 
+long long int reverseNumber(long long int n)
+{
+	//type your code here
+	long long r=0,a=0;
+	while(n>0)
+	{
+		a=n%10;
+		r=(r*10)+a;
+		n=n/10;
+	}
+	return r;
+}
