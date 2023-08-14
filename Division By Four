@@ -1,0 +1,12 @@
+#include <bits/stdc++.h> 
+void divideByFour(vector<int> &arr){
+    // Write your code here.
+
+    for(int i=0;i<arr.size();i++)
+    {
+        if(arr[i]/4==0)
+        arr[i]=-1;
+        else
+        arr[i]=arr[i]/4;
+    }
+}
