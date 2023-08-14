@@ -1,0 +1,25 @@
+class Solution{
+  public:
+    int findExtra(int a[], int b[], int n) {
+        // add code here.
+        int XORO1=0,XORO2=0,r;
+        for(int i=0;i<n;i++)
+        {
+            XORO1=XORO1^a[i];
+        }
+        
+        for(int i=0;i<n-1;i++)
+        {
+            XORO2=XORO2^b[i];
+        }
+        
+        r=XORO1^XORO2;
+        
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]==r)
+            return i;
+        }
+        
+    }
+};
