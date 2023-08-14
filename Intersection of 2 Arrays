@@ -1,0 +1,33 @@
+// User function template for C++
+
+class Solution {
+  public:
+    // Function to return the count of the number of elements in
+    // the intersection of two arrays.
+    int NumberofElementsInIntersection(int a[], int b[], int n, int m) {
+        // Your code goes here
+        int i=0,j=0;
+        
+        set <int> ans;
+        sort(a, a+n);
+        sort(b, b+m);
+        while(i<n && j<m)
+        {
+            if(a[i]==b[j])
+            {
+               ans.insert(a[i]); 
+               a[i]=-123;
+               i++;
+               j++;
+            }
+            
+            else if(a[i]<b[j])
+            i++;
+            
+            else
+            j++;
+        }
+        
+        return ans.size();
+    }
+};
