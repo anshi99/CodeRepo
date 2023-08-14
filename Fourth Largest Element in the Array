@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+
+int getFourthLargest(int arr[], int n)
+{
+    // Write your Code here
+    if(n<4)
+    return -2147483648;
+
+    sort(arr,arr+n);
+    
+    return arr[n-4];
+}
