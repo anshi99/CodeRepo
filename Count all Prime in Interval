@@ -1,0 +1,32 @@
+#include <bits/stdc++.h> 
+#include <iostream>
+
+using namespace std;
+
+//Write your totalPrime function here
+int totalPrime(int S,int E)
+{
+    int c=0;
+    for(int i=S;i<=E;i++)
+    {
+        bool flag=1;
+        for(int j=2;j<i;j++)
+        {
+            if(i%j==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag==1)
+            c++;
+    }
+    return c;
+}
+
+int main() {
+    int S, E;
+    cin >> S >> E;
+    cout << totalPrime(S, E);
+    return 0;
+}
